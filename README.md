@@ -32,7 +32,10 @@ The main features of this web app, are:
 To set up and run the project on your local machine:
 - clone the repository from github
 ```bash
-https://github.com/dedix-7/Restbnb.git
+#using https
+git clone https://github.com/dedix-7/Restbnb.git
+#using ssh
+git clone git@github.com:dedix-7/Restbnb.git
 ```
 
 
