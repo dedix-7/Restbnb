@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 This is the entry point for the estate_finder Flask application.
 It sets up the Flask app and database instance, initializes the
