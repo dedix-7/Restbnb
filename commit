@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 # a script to automate git commits and push
 
-read -p "Enter the files you want to commit" files
-echo "you entered the files '$files'"
-git add $files
+echo "Enter the files you want to commit"
+read files
+echo "you entered the files $files"
+git add "$files"
+echo "Please enter the commit message"
+read mess
+git commit -m "$mess"
+git push
