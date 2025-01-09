@@ -32,7 +32,7 @@ The main features of this web app, are:
 To set up and run the project on your local machine:
 - clone the repository from github
 ```bash
-
+     git clone https://github.com/dedix-7/Restbnb.git
 ```
 
 
@@ -100,6 +100,5 @@ To contribute,
 - push to github
 - generate a pull request
 ## License
-
-
+   MIT licence
 ``
