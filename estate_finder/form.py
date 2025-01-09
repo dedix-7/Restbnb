@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask_wtf import FlaskForm
 from wtforms import (
     StringField,
@@ -46,35 +47,3 @@ class PropertyForm(FlaskForm):
     propertyBedrooms = IntegerField('Number of Bedrooms', validators=[DataRequired()])
     propertyBathrooms = IntegerField('Number of Bathrooms', validators=[DataRequired()])
     submit = SubmitField('Add ')
-
-
-class LoginForm(FlaskForm):
-    email = StringField('email',
-                        validators=[DataRequired()])
-    password = PasswordField(
-         'Password', validators=[DataRequired()])
-    remember = BooleanField('Remember me')
-    submit = SubmitField('login')
-
-
-class RegistrationForm(FlaskForm):
-    username = StringField(
-         'username', validators=[DataRequired(), Length(min=2, max=20)])
-    email = EmailField('email', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    confirm_password = PasswordField('Confirm Password',
-                                     validators=[DataRequired(),
-                                                 EqualTo('password')])
-    submit = SubmitField('register')
-
-    def validate_username(self, username):
-        user = User.query.filter_by(username=username.data).first()
-        if user:
-            raise ValidationError('Username already taken.\
-                                  Please choose\
-                                  another username')
-
-    def validate_email(self, email):
-        email = User.query.filter_by(email=email.data).first()
-        if email:
-            raise ValidationError('Email already exists!')
