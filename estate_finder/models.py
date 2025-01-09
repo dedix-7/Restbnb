@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 from estate_finder import db, login_manager
 from flask_login import UserMixin
 
